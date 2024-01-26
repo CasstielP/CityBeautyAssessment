@@ -17,7 +17,7 @@ function Page1() {
         'Loose neck/jaw',
         'Saggy belly']
 
-    const boxImgs = [leg, arm, belly, neck]
+    const boxImgs = [leg, arm, neck, belly]
 
     const [checkedStates, setCheckedStates] = useState(new Array(4).fill(false))
 

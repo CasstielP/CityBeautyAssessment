@@ -108,6 +108,13 @@ body {
     margin-bottom: 16px;
     background-color: #556479;
     overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ;
+}
+
+.selection-box:hover {
+    border-color: #E2C47C;
 }
 
 .get-a-personalized-s {

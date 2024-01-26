@@ -1,0 +1,131 @@
+body {
+    background-color: #0c223f;
+    color: white;
+}
+
+.new-citbeauty-logo {
+
+    height: 36px;
+    width: 85px;
+  }
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 21px;
+}
+
+.intro-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 160px;
+    margin-top: 81px;
+}
+
+.intro-left {
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 198px; */
+    /* margin-top: 135.92px; */
+}
+
+.intro-right {
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 138px; */
+    overflow: hidden;
+}
+
+
+.choose-your-goal {
+    height: 29px;
+    width: 218px;
+    color: #ffffff;
+    font-family: "Work Sans";
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 27px;
+  }
+
+.intro-right-selection {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.relieve-dry-flaky-s {
+    height: 24px;
+    width: 225px;
+    color: #FFFFFF;
+    font-family: "Work Sans";
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin-left: 33px;
+  }
+
+  .get-firmer-tighter {
+    height: 48px;
+    width: 281px;
+    color: #FFFFFF;
+    font-family: "Work Sans";
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 22px;
+    line-height: 22px;
+    margin-left: 33px;
+  }
+
+.achieve-perfectly-sm {
+    height: 92px;
+    width: 450px;
+    color: #FFFFFF;
+    font-family: Unna;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 43px;
+  }
+
+.achieve-perfectly-sm-italic {
+    font-style: italic;
+    font-weight: bold;
+    font-family: Unna;
+}
+
+.selection-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    width: 517px;
+    height: 135px;
+    margin-bottom: 16px;
+    background-color: #556479;
+    overflow: hidden;
+}
+
+.get-a-personalized-s {
+    height: 38px;
+    width: 314px;
+    color: #FFFFFF;
+    font-family: "Work Sans";
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 17px;
+    margin-top: 20px;
+    margin-right: 116px;
+  }
+
+.asset-1 {
+  margin-top: 200px;
+  height: 403px;
+  width: 119.08px;
+  object-fit: cover;
+  margin-right: 11.92px;
+}

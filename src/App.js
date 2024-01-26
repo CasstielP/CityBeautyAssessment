@@ -1,6 +1,15 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import IntroPage from './components/introPage';
+
+
+
 function App() {
   return (
-    <h1>Hello from App</h1>
+    <Router>
+      <Routes>
+        <Route path='/intro' element={<IntroPage />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -10,6 +10,7 @@ function IntroPage () {
 
     return (
         <>
+        <div className="intro-page-wrapper">
         <div className="logo-container">
         <img src={cbLogo} className="new-citbeauty-logo"/>
         </div>
@@ -36,6 +37,7 @@ function IntroPage () {
                 </div>
             </div>
             </div>
+        </div>
         </div>
 
         </>

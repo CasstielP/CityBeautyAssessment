@@ -3,8 +3,15 @@ body {
     color: white;
 }
 
-.new-citbeauty-logo {
 
+.intro-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 311px;
+  flex-shrink: 0;
+}
+
+.new-citbeauty-logo {
     height: 36px;
     width: 85px;
   }
@@ -135,4 +142,69 @@ body {
   width: 119.08px;
   object-fit: cover;
   margin-right: 11.92px;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .intro-page-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 335px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .intro-left {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .achieve-perfectly-sm {
+    height: 138px;
+    width: 292px;
+  }
+
+  .choose-your-goal {
+
+  }
+  .intro-right {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+  }
+
+  .selection-box {
+    height: 135px;
+    width: 335px;
+    margin-bottom: 16px;
+    background-color: #556479;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ;
+}
+  .get-a-personalized-s {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 40px;
+    margin-top: 9px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-container {
+    margin-top: 21px;
+    margin-left: 145px;
+    margin-right: 145px;
+  }
+
+  .intro-container {
+    flex-direction: column;
+    gap: 0px;
+    margin-top: 0px;
+
+  }
 }

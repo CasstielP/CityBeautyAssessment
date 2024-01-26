@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import './introPage.css'
 import pic1 from './Group 9.png'
 import pic2 from './Group 10.png'
 import pic3 from './slide3-1-d.png'
 import cbLogo from './city-beauty-logo.png'
+
+
 function IntroPage () {
 
     return (
@@ -23,10 +25,14 @@ function IntroPage () {
             <div className="intro-right">
             <h2 className="choose-your-goal">Choose Your Goal</h2>
             <div className="intro-right-selection">
+            <Link style={{ textDecoration: "none", color: "black" }}
+                    to={`/quiz/1`}
+            >
                 <div className="selection-box">
                     <p className="relieve-dry-flaky-s">Remove Crepey Skin</p>
                     <img src={pic1} className="asset-1"/>
                 </div>
+            </Link>
                 <div className="selection-box">
                     <p className="relieve-dry-flaky-s">Relieve Dry, Flaky Skin</p>
                     <img src={pic2} className="asset-1"></img>

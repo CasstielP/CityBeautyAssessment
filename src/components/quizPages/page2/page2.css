@@ -1,0 +1,25 @@
+.p2-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.p2-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.progress-content-p2 {
+    height: 12px;
+    width: 32%;
+    background-color: #E2C47C;
+    text-align: center;
+    /* line-height: 20px; */
+    color: white;
+    transition: width 0.4s ease-in-out;
+}

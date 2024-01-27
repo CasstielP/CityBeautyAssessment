@@ -81,6 +81,7 @@ function Page1() {
                     ))
                     }
                     <div className="p1-btm-button-container">
+                        <Link style={{ textDecoration: "none", color: 'none' }} to={'/quiz/2'}>
                         <div className="p1-btm-buttons"
                             id="p1-btm-buttons-continue"
                         >
@@ -97,6 +98,9 @@ function Page1() {
                             </div>
 
                         </div>
+                        </Link>
+                        <Link style={{textDecoration: 'none', color: 'none' }}
+                              to={'/quiz/2'}>
                         <div className="p1-btm-buttons"
                              id='p1ButTextSkip'
                         >
@@ -104,6 +108,7 @@ function Page1() {
                                 Skip
                                 </div>
                         </div>
+                        </Link>
                     </div>
                 </div>
             </div>

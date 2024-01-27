@@ -25,12 +25,13 @@ const Page2 = () => {
         setCheckedStates(updatedCheckedStates)
     }
 
+
     const handleUnsure = () => {
         setIsUnsure(prevState => !prevState)
-        console.log(isUnsure)
-
+        // if (isUnsure == true) {
+        //         checkedStates.map((item) => item = false)
+        // }
     }
-
     useEffect(() => {
 
     }, [isUnsure])

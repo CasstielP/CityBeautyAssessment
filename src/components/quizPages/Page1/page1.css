@@ -117,9 +117,9 @@
     transition: border-color 0.3s ;
 }
 
-.selection-box-page1:hover {
+/* .selection-box-page1:hover {
     border-color: #E2C47C;
-}
+} */
 
 .image-page1 {
     height: 135px;

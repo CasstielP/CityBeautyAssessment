@@ -4,7 +4,6 @@
     align-items: center;
 }
 
-
 .p2-container{
     display: flex;
     flex-direction: column;
@@ -13,6 +12,12 @@
 
 }
 
+.logo-container-p2 {
+    display: flex;
+    margin-top: 21px;
+    margin-bottom: 32px;
+    align-self: flex-start;
+}
 
 .progress-content-p2 {
     height: 12px;
@@ -23,3 +28,95 @@
     color: white;
     transition: width 0.4s ease-in-out;
 }
+
+.p2-what-hydrating-ingre{
+    height: 59px;
+    width: 434px;
+    color: #FFFFFF;
+    font-family: "Work Sans";
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 27px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    align-self: flex-start;
+
+}
+.p2-box-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 385px;
+    height: 72px;
+    gap: 10px;
+}
+
+.page2-box-text{
+    height: 38px;
+    width: 385px;
+    color: #FFFFFF;
+    font-family: "Work Sans";
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 17px;
+}
+
+.p2-box-title{
+    height: 24px;
+    width: 385px;
+    color: #FFFFFF;
+    font-family: "Work Sans";
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 22px;
+    margin: 0 0;
+}
+
+.p2-line-break{
+    box-sizing: border-box;
+    height: 1px;
+    width: 519px;
+    border: 1px solid #556579;
+    margin-bottom: 31.5px;
+    margin-top: 15.5px;
+}
+
+.unsure-btn {
+    border: 1px solid transparent;
+    height: 110px;
+    width: 517px;
+    background-color: #556579;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 22px;
+    cursor: pointer;
+
+}
+
+.unsure-btn-content-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.p2-x-mark {
+    color: red;
+    font-size: 25px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.unsure-what-my-ski {
+    height: 24px;
+    width: 321px;
+    color: #FFFFFF;
+    font-family: "Work Sans";
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 22px;
+  }

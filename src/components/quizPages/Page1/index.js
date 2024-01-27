@@ -21,20 +21,11 @@ function Page1() {
 
     const [checkedStates, setCheckedStates] = useState(new Array(4).fill(false))
 
-    // const [isHighlighted, setIsHighlighted] = useState(new Array(4).fill(false))
-
-
-
     const handleCheckBox = (index) => {
         const updatedCheckedStates = checkedStates.map((item, idx) =>
             idx === index ? !item : item
         )
         setCheckedStates(updatedCheckedStates)
-
-        // const updatedIsHighLighted = isHighlighted.map((item, idx)=>
-        //     idx === index ? !item :item
-        // )
-        // setIsHighlighted(updatedCheckedStates)
     }
 
 
@@ -70,7 +61,7 @@ function Page1() {
                         style={{borderColor: isChecked ? '#E2C47C' : 'initial'}}>
                             <div className="p1-text-container">
                                 <div className="check-box" onClick={() => handleCheckBox(index)}
-                                    style={{borderColor: isChecked ? '#E2C47C' : 'initial'}}
+
                                 >
                                     {isChecked && <span className="check-mark">&#10003;</span>}
                                 </div>

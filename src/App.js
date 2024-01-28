@@ -4,7 +4,7 @@ import Page1 from './components/quizPages/Page1';
 import Page2 from './components/quizPages/page2';
 import Page3 from './components/quizPages/page3';
 import Page4 from './components/quizPages/page4';
-
+import Page5 from './components/quizPages/page5';
 
 function App() {
   return (
@@ -23,6 +23,9 @@ function App() {
       </Routes>
       <Routes>
         <Route path='/quiz/4' element={<Page4/>} />
+      </Routes>
+      <Routes>
+        <Route path='/quiz/5' element={<Page5/>} />
       </Routes>
     </Router>
   );

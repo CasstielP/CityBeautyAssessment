@@ -36,7 +36,7 @@ const Page5 = () => {
         if (sliderRef.current) {
             const slider = sliderRef.current;
             const max = types.length - 1;
-            const newPos = (sliderValue / max) * (slider.offsetWidth - 20)
+            const newPos = (sliderValue / max) * (slider.offsetWidth)
             setIndicatorLeft(newPos)
         }
     }, [sliderValue]);
@@ -69,13 +69,13 @@ const Page5 = () => {
                 <h2>How often do you moisturize your skin?</h2>
                 <p>Choose your current level to align with your routine:</p>
 
-                <div className="slider-wrapper">
+                <div className="p5-slider-wrapper">
 
                                 <div className='p5-1-10'>
                                     <div>1</div>
                                     <div>10</div>
                                 </div>
-                                    <div className="p3-slider-value-text-container" style={{
+                                    <div className="p5-slider-value-text-container" style={{
                                         position: 'absolute',
                                         left: `${indicatorLeft}px`,
                                     }}>
@@ -87,9 +87,9 @@ const Page5 = () => {
                                     <input ref={sliderRef} type="range" min="0" max="10" value={sliderValue}
                                         class="slider" className="p5-slider"
                                         onChange={handleSliderChange} />
-                                    <div className="dry-norm-foot-text-container">
-                                        <div className="dry-norm-foot-text-l">Newcomer</div>
-                                        <div className="dry-norm-foot-text-r">Pro</div>
+                                    <div className="new-pro-container">
+                                        <div className="new">Newcomer</div>
+                                        <div className="pro">Pro</div>
                                     </div>
                                 </div>
                             </div>

@@ -1,0 +1,162 @@
+.p3-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p3-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.logo-container-p3 {
+    display: flex;
+    margin-top: 21px;
+    margin-bottom: 32px;
+
+}
+
+.p3-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 32px;
+    margin-top: 57px;
+}
+
+.how-would-you-desc {
+    height: 29px;
+    width: 439px;
+    color: #FFFFFF;
+    font-family: "Work Sans";
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 27px;
+}
+
+.p3-left-content {
+    /* width: 100px;
+    height: 500px; */
+}
+
+.p3-right-content {
+    /* border: 2px orange solid; */
+}
+
+
+
+.slider-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 450px;
+    height: 110px;
+}
+
+
+
+.p3-slider-value-text-container {
+    display: flex;
+    position: absolute;
+    top: -30px;
+    max-width: 151px;
+    max-height: 19px;
+    background-color: #546578;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.p3-slider-value-text-container::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 3px solid #556579;
+}
+
+
+.p3-slider-value-text-container {
+    padding: 2px 5px;
+    font-size: 16px;
+    font-family: "Work Sans";
+}
+
+/* .p3-slider-value-container{
+    position: absolute;
+} */
+
+.p3-slider {
+    width: 355px;
+    max-height: 30px;
+}
+
+.p3-slider::-webkit-slider-runnable-track {
+    max-height: 7px;
+    background: linear-gradient(to right,
+            #546578 0%, #546578 19.6%,
+            #0C233F 19.6%, #0C233F 20.1%,
+            #546578 20.1%, #546578 39.7%,
+            #0C233F 39.7%, #0C233F 40.2%,
+            #546578 40.2%, #546578 59.8%,
+            #0C233F 59.8%, #0C233F 60.3%,
+            #546578 60.3%, #546578 79.9%,
+            #0C233F 79.9%, #0C233F 80.4%,
+            #546578 80.4%, #546578 100%);
+}
+
+.p3-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: -5px;
+    width: 7px;
+    height: 7px;
+    background: #ffcc00;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    width: 355px;
+    gap: 17px;
+}
+
+.dry-norm-foot-text-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.dry-norm-foot-text-l{
+    color: #FFFFFF;
+    font-family: "Work Sans";
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 17px;
+    text-align: left;
+}
+
+.dry-norm-foot-text-r{
+    color: #FFFFFF;
+    font-family: "Work Sans";
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 17px;
+    text-align: right;
+}
+
+.p3-img {
+    height: 496px;
+    width: 141px;
+}

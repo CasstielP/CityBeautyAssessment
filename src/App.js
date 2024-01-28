@@ -3,6 +3,9 @@ import IntroPage from './components/introPage';
 import Page1 from './components/quizPages/Page1';
 import Page2 from './components/quizPages/page2';
 import Page3 from './components/quizPages/page3';
+import Page4 from './components/quizPages/page4';
+
+
 function App() {
   return (
     <Router>
@@ -17,6 +20,9 @@ function App() {
       </Routes>
       <Routes>
         <Route path='/quiz/3' element={<Page3/>} />
+      </Routes>
+      <Routes>
+        <Route path='/quiz/4' element={<Page4/>} />
       </Routes>
     </Router>
   );

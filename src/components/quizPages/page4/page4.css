@@ -1,0 +1,40 @@
+.p4-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.p4-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.p4-img {
+    height: 367px;
+    width: 408.62px
+}
+
+.p4-body-content-container{
+    display: flex;
+    flex-direction: row;
+    gap: 43.19px;
+    margin-top: 98px;
+    margin-bottom: 340px;
+}
+
+.p4-r-content-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.p4-pararaph{
+  font-family: "Work Sans";
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 25px;
+  margin-bottom: 32px;
+  margin-top: 26px;
+}

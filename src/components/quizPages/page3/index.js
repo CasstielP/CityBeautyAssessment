@@ -94,7 +94,7 @@ const Page3 = () => {
                                 </div>
                             </div>
                     <div className="p1-btm-button-container">
-                        <Link style={{ textDecoration: "none", color: 'none' }} to={'/quiz/3'}>
+                        <Link style={{ textDecoration: "none", color: 'none' }} to={'/quiz/4'}>
                             <div className="p1-btm-buttons"
                                 id="p1-btm-buttons-continue"
                             >
@@ -113,7 +113,7 @@ const Page3 = () => {
                             </div>
                         </Link>
                         <Link style={{ textDecoration: 'none', color: 'none' }}
-                            to={'/quiz/3'}>
+                            to={'/quiz/4'}>
                             <div className="p1-btm-buttons"
                                 id='p1ButTextSkip'
                             >

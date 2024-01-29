@@ -54,7 +54,7 @@
 
 .page2-box-text{
     height: 38px;
-    width: 385px;
+    /* width: 385px; */
     color: #FFFFFF;
     font-family: "Work Sans";
     font-size: 16px;
@@ -64,7 +64,7 @@
 
 .p2-box-title{
     height: 24px;
-    width: 385px;
+    /* width: 385px; */
     color: #FFFFFF;
     font-family: "Work Sans";
     font-size: 20px;
@@ -112,11 +112,59 @@
 
 .unsure-what-my-ski {
     height: 24px;
-    width: 321px;
+    /* width: 321px; */
     color: #FFFFFF;
     font-family: "Work Sans";
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 0;
     line-height: 22px;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .p2-wrapper{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 335px;
+        margin: 0 20px;
+        margin-bottom: 376px;
+    }
+
+    .page2-container {
+        align-self: center;
+        max-width: 335px;
+      }
+
+.p2-what-hydrating-ingre{
+    max-width: 355px;
+}
+
+
+.selection-box-page1{
+    max-width: 355px;
+}
+
+.p2-box-text-container{
+    max-width: 355px;
+}
+.page2-box-text{
+    max-width: 355px;
+}
+
+.p2-box-title{
+    max-width: 355px;
+
+}
+.p2-line-break{
+    max-width: 355px;
+
+}
+
+.unsure-btn {
+    max-width: 355px;
+
+}
+
   }

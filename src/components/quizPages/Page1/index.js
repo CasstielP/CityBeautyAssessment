@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Redirect, Link, useNavigate } from "react-router-dom";
+import {Link, useNavigate } from "react-router-dom";
 import './page1.css'
 import cbLogo from './city-beauty-logo.png'
 import leg from './slide4-legs.png'

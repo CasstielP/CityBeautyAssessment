@@ -7,6 +7,16 @@ import microWrinkle from './pg-3-microwrinkles-d.png'
 import scaly from './pg-3-scaly-d.png'
 import itchy from './pg-3-itchy-d.png'
 import crepey from './pg-3-crepey-d.png'
+import normalM from './pg-3-normal-m.jpg'
+import dryM from './pg-3-dry-m.jpg'
+import microWrinkleM from './pg-3-microwrinkles-m.jpg'
+import scalyM from './pg-3-scaly-m.jpg'
+import itchyM from './pg-3-itchy-m.jpg'
+import crepeyM from './pg-3-crepey-m.jpg'
+
+
+
+
 import { useEffect, useRef, useState } from "react";
 
 
@@ -14,7 +24,10 @@ const Page3 = () => {
 
     const [sliderValue, setSliderValue] = useState(0);
     const [indicatorLeft, setIndicatorLeft] = useState(0)
+    const [currentImg, setCurrentImg] = useState(normal)
     const sliderRef = useRef(null)
+
+    const mImgArr = [normalM,dryM,microWrinkleM,scalyM,itchyM,crepeyM]
 
     const p3ContentArray = [
         {skinTypes: 'Normal Skin',img: normal},
@@ -29,6 +42,12 @@ const Page3 = () => {
     const types = ['Normal Skin', 'Dry Skin', 'Microwrinkles',
         'Scaly, Rough Skin', 'Itchy, Irritated Skin', 'Crepey Skin']
 
+    const updateImgForScreenWidth = () => {
+        const screenWidth = window.innerWidth
+        const newImg = screenWidth < 768? mImgArr[sliderValue] : p3ContentArray[sliderValue].img
+        setCurrentImg(newImg)
+    }
+
     const handleSliderChange = (event) => {
         setSliderValue(event.target.value)
     }
@@ -41,6 +60,12 @@ const Page3 = () => {
             const newPos = (sliderValue / max) * (slider.offsetWidth - 20)
             setIndicatorLeft(newPos)
         }
+        window.addEventListener('resize', updateImgForScreenWidth)
+        updateImgForScreenWidth()
+        return () => {
+            window.removeEventListener('resize', updateImgForScreenWidth)
+        }
+
     }, [sliderValue]);
 
 
@@ -69,7 +94,7 @@ const Page3 = () => {
 
                     <div className="p3-content-container">
                         <div className="p3-left-content">
-                            <img className="p3-img" src={p3ContentArray[sliderValue].img}></img>
+                            <img className="p3-img" src={currentImg}></img>
                         </div>
                         <div className="p3-right-content">
 

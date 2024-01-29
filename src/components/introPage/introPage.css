@@ -11,6 +11,13 @@ body {
   flex-shrink: 0;
 }
 
+.intro-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .new-citbeauty-logo {
     height: 36px;
     width: 85px;
@@ -144,15 +151,15 @@ body {
   margin-right: 11.92px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
 
   .intro-page-wrapper {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 335px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 0 20px;
+    margin-bottom: 376px;
   }
 
   .intro-left {
@@ -164,10 +171,12 @@ body {
   .achieve-perfectly-sm {
     height: 138px;
     width: 292px;
+    margin-bottom: 30px;
   }
 
   .choose-your-goal {
-
+    align-self: flex-start;
+    margin-left: 30px;
   }
   .intro-right {
     justify-content: center;
@@ -187,9 +196,9 @@ body {
     transition: border-color 0.3s ;
 }
   .get-a-personalized-s {
-    margin-top: 0;
+    margin-top: 30px;
     margin-right: 0;
-    margin-left: 40px;
+    margin-left: 30px;
     margin-top: 9px;
     align-items: center;
     justify-content: center;
@@ -206,5 +215,18 @@ body {
     gap: 0px;
     margin-top: 0px;
 
+  }
+
+  .get-firmer-tighter{
+    height: 72px;
+    width: 169px;
+    color: #FFFFFF;
+    font-family: "Work Sans";
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 22px;
+    line-height: 22px;
+    margin-left: 33px;
   }
 }

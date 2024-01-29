@@ -147,13 +147,11 @@
   }
 
   .check-mark {
-    height: 35px;
-    width: 23px;
+    height: 30px;
+    width: 30px;
     color: #E2C47C;
     font-family: "Lucida Grande";
-    font-size: 30px;
-    letter-spacing: 0;
-    line-height: 35px;
+    /* font-size: 30px; */
   }
 
   .p1-btm-button-container{
@@ -212,4 +210,54 @@
     font-weight: 600;
     letter-spacing: 0;
     line-height: 22px;
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .page-1-wrapper{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 335px;
+      margin: 0 20px;
+      margin-bottom: 376px;
+    }
+
+    .page-1-container {
+      align-self: center;
+      max-width: 335px;
+    }
+
+  .selection-box-page1 {
+    max-width: 335px;
+    margin: none;
+  }
+
+  .p1-btm-button-container{
+    max-width: 355px;
+    margin: none;
+  }
+  .p1-btm-buttons{
+    max-width: 355px;
+
+  }
+  .progress-bar-container{
+    max-width: 355px;
+  }
+
+  .check-box {
+    height: 23px;
+    width: 23px;
+  }
+
+  .check-mark {
+    height: 20px;
+    width: 15px;
+  }
+
+  .p1-text-container{
+    margin-left: 10px;
+    max-width: 340px;
+  }
+
   }

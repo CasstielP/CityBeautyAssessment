@@ -30,7 +30,7 @@
 
 .how-would-you-desc {
     height: 29px;
-    width: 439px;
+    /* width: 439px; */
     color: #FFFFFF;
     font-family: "Work Sans";
     font-size: 25px;
@@ -167,4 +167,45 @@
 .p3-img {
     height: 496px;
     width: 141px;
+}
+
+
+@media screen and (max-width: 768px) {
+.p3-wrapper{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 335px;
+    margin: 0 20px;
+    margin-bottom: 376px;
+}
+.p3-container{
+    align-self: center;
+    max-width: 335px;
+}
+
+.p3-content-container{
+    max-width: 355px;
+    display: flex;
+    flex-direction: column;
+}
+
+.slider-container{
+    margin-top: 20px;
+}
+
+.p3-slider-value-text-container{
+    top: -18px;
+    width: 60px;
+    height: 30px;
+}
+
+.p3-slider-value{
+    font-size: 11px;
+}
+
+.p3-img{
+    width: 355px;
+    height: 278px;
+}
 }

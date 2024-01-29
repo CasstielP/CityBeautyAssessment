@@ -52,8 +52,9 @@ const Page5 = () => {
     useEffect(() => {
         if (sliderRef.current) {
             const slider = sliderRef.current;
-            const max = types.length - 1;
-            const newPos = (sliderValue / max) * (slider.offsetWidth)
+            // const max = types.length - 1;
+            const max = 10;
+            const newPos = (sliderValue / max) * (slider.offsetWidth) -40
             setIndicatorLeft(newPos)
         }
     }, [sliderValue]);

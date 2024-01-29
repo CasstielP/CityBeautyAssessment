@@ -7,7 +7,7 @@ import Page4 from './components/quizPages/page4';
 import Page5 from './components/quizPages/page5';
 import Page6 from './components/quizPages/page6';
 import Page7 from './components/quizPages/page7';
-import NotFoundPage from './components/notFoundPage';
+
 
 function App() {
   return (
@@ -35,9 +35,6 @@ function App() {
       </Routes>
       <Routes>
         <Route path='/quiz/7' element={<Page7 />} />
-      </Routes>
-      <Routes>
-        <Route path='*' element={<NotFoundPage />} />
       </Routes>
     </Router>
   );

@@ -1,6 +1,7 @@
 import './page6.css'
 import cbLogo from '../Page1/city-beauty-logo.png'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 const Page6 = () => {
 
@@ -11,6 +12,15 @@ const Page6 = () => {
         '5 Minutes',
     ]
 
+    const [selectOption, setSelectOption] = useState('')
+
+    const handleChange = (event) => {
+        setSelectOption(event.target.value)
+    }
+
+    const getDivStyle  = (optionValue) => {
+        return selectOption === optionValue ? {borderColor: '#E2C47C'} : {}
+    }
 
     return (
         <>
@@ -38,11 +48,17 @@ const Page6 = () => {
 
                     <div className='p6-choice-box-container'>
                         {
-                            boxContent.map((content)=>(
-                        <div className='p6-choice-box'>
+                            boxContent.map((content, index)=>(
+                        <div className='p6-choice-box'
+                            style={getDivStyle(`bodyCareTime${index}`)}>
                             <div className='p6-choice-box-content-wrapper'>
 
-                                <input type="radio" name="bodyCareTime" className='p6-radio-input' />
+                                <input type="radio" name="bodyCareTime"
+                                value= {`bodyCareTime${index}`}
+                                className='p6-radio-input'
+                                onChange={handleChange}
+                                checked={selectOption === `bodyCareTime${index}`}
+                                />
                                 <label htmlFor="bodyCareTimeOption" className="p6-radio-label"></label>
                                 <div className='p6-box-text'>{content}</div>
                             </div>

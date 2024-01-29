@@ -38,3 +38,35 @@
   margin-bottom: 32px;
   margin-top: 26px;
 }
+
+
+@media screen and (max-width: 768px) {
+.p4-wrapper{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 335px;
+    margin: 0 20px;
+    margin-bottom: 376px;
+}
+
+.p4-container{
+    align-self: center;
+    max-width: 335px;
+}
+
+.p4-body-content-container{
+    max-width: 355px;
+    display: flex;
+    flex-direction: column;
+}
+
+.p4-img{
+    width: 355px;
+    height: 301px;
+}
+.p4-body-content-container{
+    margin-top: 28px;
+    gap: 10px;
+}
+}

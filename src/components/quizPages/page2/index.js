@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import cbLogo from './city-beauty-logo.png'
 import './page2.css'
 const Page2 = () => {
@@ -15,6 +15,7 @@ const Page2 = () => {
 
     const [checkedStates, setCheckedStates] = useState(new Array(4).fill(false))
 
+
     let [isUnsure, setIsUnsure] = useState(false)
 
     const handleCheckBox = (index) => {
@@ -22,6 +23,24 @@ const Page2 = () => {
             idx === index ? !item : item
         )
         setCheckedStates(updatedCheckedStates)
+    }
+
+    const navigate = useNavigate()
+
+    const handleContinue = () => {
+        let isAnyTrue = checkedStates.some(state=> state == true)
+        if (isAnyTrue || isUnsure) {
+            navigate('/quiz/3')
+        }
+    }
+
+    const handleSkip = () => {
+        let isAnyTrue = checkedStates.some(state=> state == true)
+        if (isAnyTrue) {
+            window.alert("Click the 'Continute Button to get to the next page'")
+        } else {
+            navigate('/quiz/3')
+        }
     }
 
 
@@ -87,9 +106,10 @@ const Page2 = () => {
                         </div>
                     </div>
                     <div className="p1-btm-button-container">
-                        <Link style={{ textDecoration: "none", color: 'none' }} to={'/quiz/3'}>
+
                             <div className="p1-btm-buttons"
                                 id="p1-btm-buttons-continue"
+                                onClick={handleContinue}
                             >
 
                                 <div className="p1-but-text-con"
@@ -104,17 +124,18 @@ const Page2 = () => {
                                 </div>
 
                             </div>
-                        </Link>
-                        <Link style={{ textDecoration: 'none', color: 'none' }}
-                            to={'/quiz/3'}>
+
+
+
                             <div className="p1-btm-buttons"
                                 id='p1ButTextSkip'
+                                onClick={handleSkip}
                             >
                                 <div id='textSkip'>
                                     Skip
                                 </div>
                             </div>
-                        </Link>
+
                     </div>
 
                 </div>

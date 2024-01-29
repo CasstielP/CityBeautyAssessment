@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect, Link } from "react-router-dom";
+import { Redirect, Link, useNavigate } from "react-router-dom";
 import './page1.css'
 import cbLogo from './city-beauty-logo.png'
 import leg from './slide4-legs.png'
@@ -11,6 +11,8 @@ import neck from './slide4-neck.png'
 
 
 function Page1() {
+
+    const navigate = useNavigate()
 
     const boxTexts = ['Loose skin on thighs and legs',
         'Thinning skin on arms',
@@ -26,6 +28,20 @@ function Page1() {
             idx === index ? !item : item
         )
         setCheckedStates(updatedCheckedStates)
+    }
+
+
+    const handleContinue = () => {
+        navigate('/quiz/2')
+    }
+
+    const handleSkip = () => {
+        let isAnyTrue = checkedStates.some(state=> state == true)
+        if (isAnyTrue) {
+            window.alert("Click the 'Continute Button to get to the next page'")
+        } else {
+            navigate('/quiz/2')
+        }
     }
 
 
@@ -71,14 +87,18 @@ function Page1() {
                         </div>
                     ))
                     }
-                    <div className="p1-btm-button-container">
-                        <Link style={{ textDecoration: "none", color: 'none' }} to={'/quiz/2'}>
+                    <div className="p1-btm-button-container"
+
+                    >
+
                         <div className="p1-btm-buttons"
                             id="p1-btm-buttons-continue"
-                        >
+                        onClick={handleContinue}>
 
                             <div className="p1-but-text-con"
-                                id='p1-btm-continue-txt'>
+                                id='p1-btm-continue-txt'
+
+                                >
                                 Continue
                             </div>
                             <div className="p1-but-text-con">
@@ -89,17 +109,18 @@ function Page1() {
                             </div>
 
                         </div>
-                        </Link>
-                        <Link style={{textDecoration: 'none', color: 'none' }}
-                              to={'/quiz/2'}>
+
+
+
                         <div className="p1-btm-buttons"
                              id='p1ButTextSkip'
+                             onClick={handleSkip}
                         >
                                 <div id='textSkip'>
                                 Skip
                                 </div>
                         </div>
-                        </Link>
+
                     </div>
                 </div>
             </div>

@@ -27,8 +27,20 @@ const Page7 = () => {
         setCheckedStates(updatedCheckedStates)
     }
 
-    const handleIsDone = () => {
-        setIsDone(true)
+    let isAnyTrue = checkedStates.some(state=> state==true)
+
+    const handleContinue = () => {
+        if (isAnyTrue || isNoneAbove) {
+            setIsDone(true)
+        }
+    }
+
+    const handleSkip = () => {
+        if (isAnyTrue || isNoneAbove) {
+            window.alert('Please Click the Continue button')
+        } else {
+            setIsDone(true)
+        }
     }
 
 
@@ -101,10 +113,10 @@ const Page7 = () => {
 
 
                     <div className="p1-btm-button-container"
-                        onClick={handleIsDone}
                     >
                             <div className="p1-btm-buttons"
                                 id="p1-btm-buttons-continue"
+                                onClick={handleContinue}
                             >
 
                                 <div className="p1-but-text-con"
@@ -121,6 +133,7 @@ const Page7 = () => {
                             </div>
                             <div className="p1-btm-buttons"
                                 id='p1ButTextSkip'
+                                onClick={handleSkip}
                             >
                                 <div id='textSkip'>
                                     Skip

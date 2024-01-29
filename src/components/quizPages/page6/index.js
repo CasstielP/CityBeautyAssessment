@@ -1,6 +1,6 @@
 import './page6.css'
 import cbLogo from '../Page1/city-beauty-logo.png'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
 const Page6 = () => {
@@ -21,6 +21,25 @@ const Page6 = () => {
     const getDivStyle  = (optionValue) => {
         return selectOption === optionValue ? {borderColor: '#E2C47C'} : {}
     }
+
+
+
+    const navigate = useNavigate()
+
+    const handleContinue = () => {
+        if (selectOption != '') {
+            navigate('/quiz/7')
+        }
+    }
+
+    const handleSkip = () => {
+        if (selectOption != '') {
+            window.alert("Click the 'Continute Button to get to the next page'")
+        } else {
+            navigate('/quiz/7')
+        }
+    }
+
 
     return (
         <>
@@ -67,11 +86,13 @@ const Page6 = () => {
                         }
                     </div>
 
-                    <div className="p1-btm-button-container">
-                        <Link style={{ textDecoration: "none", color: 'none', marginTop: '17px' }}
-                        to={'/quiz/7'}>
+                    <div className="p1-btm-button-container"
+                        id='p6-btm-button-container'>
+
+
                             <div className="p1-btm-buttons"
                                 id="p1-btm-buttons-continue"
+                                onClick={handleContinue}
                             >
 
                                 <div className="p1-but-text-con"
@@ -86,17 +107,18 @@ const Page6 = () => {
                                 </div>
 
                             </div>
-                        </Link>
-                        <Link style={{ textDecoration: 'none', color: 'none' }}
-                            to={'/quiz/7'}>
+
+
+
                             <div className="p1-btm-buttons"
                                 id='p1ButTextSkip'
+                                onClick={handleSkip}
                             >
                                 <div id='textSkip'>
                                     Skip
                                 </div>
                             </div>
-                        </Link>
+
                     </div>
                 </div>
             </div>

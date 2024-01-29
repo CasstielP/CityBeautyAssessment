@@ -1,21 +1,24 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import cbLogo from './city-beauty-logo.png'
-import './page2.css'
-const Page2 = () => {
-
-    const p2BoxTitles = ['Niacinamide', 'Lipid Compound', 'Ribose', 'Jojoba Leaf Extract', 'Glycerin']
-
-    const p2BoxTexts = ['This is a form of vitamin B that supports protien and collagen to promote optimal skin health',
-        'This improves moisture retention in the skin\'s barrier for long-lasting hydration',
-        'This reduces the appearance of thinning, wrinkled skin',
-        'This is rich in antioxidants and helps stimulate the production of collagen',
-        'This helps keep skin hydrated']
+import cbLogo from '../Page1/city-beauty-logo.png'
+import './page7.css'
+import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 
 
-    const [checkedStates, setCheckedStates] = useState(new Array(4).fill(false))
+const Page7 = () => {
 
-    let [isUnsure, setIsUnsure] = useState(false)
+    const p7ContentArr = [
+        'Overwhelmed, too many products to keep track of',
+        'Ovecomplicated, hard to understand ingredients',
+        'Hopelessness',
+        'No Results',
+        'Anxiety',
+    ]
+
+    let [isNoneAbove, setIsNoneAbove] = useState(false)
+
+    const [isDone, setIsDone] = useState(false)
+
+    const [checkedStates, setCheckedStates] = useState(new Array(5).fill(false))
 
     const handleCheckBox = (index) => {
         const updatedCheckedStates = checkedStates.map((item, idx) =>
@@ -24,24 +27,29 @@ const Page2 = () => {
         setCheckedStates(updatedCheckedStates)
     }
 
+    const handleIsDone = () => {
+        setIsDone(true)
+    }
 
-    const handleUnsure = () => {
-        setIsUnsure(prevState => !prevState)
+
+    const handleNoneAbove = () => {
+        setIsNoneAbove(prevState => !prevState)
     }
     useEffect(() => {
 
-    }, [isUnsure])
+    }, [isNoneAbove])
+
 
 
     return (
         <>
-            <div className="p2-wrapper">
-                <div className="p2-container">
-                    <div className="logo-container-p2">
+            <div className="p7-wrapper">
+                <div className="p7-container">
+                    <div className="logo-container-p7">
                         <img src={cbLogo} className="new-citbeauty-logo" />
                     </div>
                     <div className="progress-bar-container">
-                        <Link style={{ textDecoration: "none", color: 'white' }} to={'/quiz/1'}>
+                        <Link style={{ textDecoration: "none", color: 'white' }} to={'/quiz/6'}>
                             <div className="rectangle">
                                 <span class="material-symbols-outlined">
                                     chevron_left
@@ -49,18 +57,21 @@ const Page2 = () => {
                             </div>
                         </Link>
                         <div className="progress-bar-box">
-                            <div className="progress-content-p2"></div>
+                            <div className="progress-content-p7"></div>
                         </div>
                         <div className="num-indicator">
-                            2/6
+                            6/6
                         </div>
                     </div>
-                    <div className="p2-what-hydrating-ingre">
-                        What hydrating ingredients are you interested in?
+
+                    <div className='have-you-exp'>
+                        Have you experienced any of these issues <br/>in your previous skincare attempts?
                     </div>
 
+
+
                     {checkedStates.map((isChecked, index) => (
-                        <div key={index} className="selection-box-page1"
+                        <div key={index} className="selection-box-page7"
                             style={{ borderColor: isChecked ? '#E2C47C' : 'transparent' }}>
                             <div className="p1-text-container">
                                 <div className="check-box" onClick={() => handleCheckBox(index)}
@@ -69,25 +80,29 @@ const Page2 = () => {
                                     {isChecked && <span className="check-mark">&#10003;</span>}
                                 </div>
                                 <div className="p2-box-text-container">
-                                    <h3 className="p2-box-title">{p2BoxTitles[index]}</h3>
-                                    <p className="page2-box-text">{p2BoxTexts[index]}</p>
+                                    <p className="page7-box-text">{p7ContentArr[index]}</p>
                                 </div>
                             </div>
                         </div>
 
                     ))
                     }
+
                     <div className="p2-line-break"></div>
 
-                    <div className="unsure-btn" key={isUnsure} onClick={handleUnsure}
-                        style={{ borderColor: isUnsure ? '#E2C47C' : 'initial' }}>
+
+                    <div className="unsure-btn" key={isNoneAbove} onClick={handleNoneAbove}
+                        style={{ borderColor: isNoneAbove ? '#E2C47C' : 'initial' }}>
                         <div className="unsure-btn-content-container">
                             <span className="p2-x-mark">&#10006;</span>
-                            <div className="unsure-what-my-ski">Unsure what my skin needs</div>
+                            <div className="unsure-what-my-ski">None of the above</div>
                         </div>
                     </div>
-                    <div className="p1-btm-button-container">
-                        <Link style={{ textDecoration: "none", color: 'none' }} to={'/quiz/3'}>
+
+
+                    <div className="p1-btm-button-container"
+                        onClick={handleIsDone}
+                    >
                             <div className="p1-btm-buttons"
                                 id="p1-btm-buttons-continue"
                             >
@@ -104,9 +119,6 @@ const Page2 = () => {
                                 </div>
 
                             </div>
-                        </Link>
-                        <Link style={{ textDecoration: 'none', color: 'none' }}
-                            to={'/quiz/3'}>
                             <div className="p1-btm-buttons"
                                 id='p1ButTextSkip'
                             >
@@ -114,24 +126,27 @@ const Page2 = () => {
                                     Skip
                                 </div>
                             </div>
-                        </Link>
                     </div>
+
+                    {isDone &&
+                    <div className='p7-thank-you'>
+                        <div className='p7-thankyou-content-container'>
+                            <div className='thankyou-title'>Thanks for sharing!</div>
+                            <div className='thankyou-text'>We've discovered that a lot of people have faced the
+                                <br/>same setbacks. City Beauty has a clear one-step
+                                <br/>treatment that is easy to follow with long-term
+                                <br/>results. In less than two minutes, you will feel better
+                                <br/>than ever.
+                            </div>
+                        </div>
+                    </div>
+                    }
 
                 </div>
             </div>
         </>
     )
-
 }
 
 
-
-
-
-
-
-
-
-
-
-export default Page2
+export default Page7

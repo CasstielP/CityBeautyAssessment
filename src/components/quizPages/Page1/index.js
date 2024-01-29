@@ -31,12 +31,15 @@ function Page1() {
     }
 
 
+    let isAnyTrue = checkedStates.some(state=> state == true)
+
     const handleContinue = () => {
-        navigate('/quiz/2')
+        if(isAnyTrue) {
+            navigate('/quiz/2')
+        }
     }
 
     const handleSkip = () => {
-        let isAnyTrue = checkedStates.some(state=> state == true)
         if (isAnyTrue) {
             window.alert("Click the 'Continute Button to get to the next page'")
         } else {

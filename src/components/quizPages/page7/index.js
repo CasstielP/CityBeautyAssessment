@@ -1,7 +1,7 @@
 import cbLogo from '../Page1/city-beauty-logo.png'
 import './page7.css'
 import { Link } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 
 const Page7 = () => {
@@ -43,6 +43,7 @@ const Page7 = () => {
         }
     }
 
+    const divRef = useRef(null)
 
     const handleNoneAbove = () => {
         setIsNoneAbove(prevState => !prevState)
@@ -50,6 +51,13 @@ const Page7 = () => {
     useEffect(() => {
 
     }, [isNoneAbove])
+
+
+    useEffect(() => {
+        if (isDone && divRef.current) {
+            divRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, [isDone]);
 
 
 
@@ -142,7 +150,7 @@ const Page7 = () => {
                     </div>
 
                     {isDone &&
-                    <div className='p7-thank-you'>
+                    <div ref={divRef} className='p7-thank-you'>
                         <div className='p7-thankyou-content-container'>
                             <div className='thankyou-title'>Thanks for sharing!</div>
                             <div className='thankyou-text'>We've discovered that a lot of people have faced the

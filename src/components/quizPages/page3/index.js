@@ -60,7 +60,7 @@ const Page3 = () => {
                             </div>
                         </Link>
                         <div className="progress-bar-box">
-                            <div className="progress-content-p2"></div>
+                            <div className="progress-content-p3"></div>
                         </div>
                         <div className="num-indicator">
                             3/6

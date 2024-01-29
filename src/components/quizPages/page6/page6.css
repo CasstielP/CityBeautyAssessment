@@ -1,0 +1,83 @@
+.p6-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.p6-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logo-container-p6{
+    display: flex;
+    align-self: flex-start;
+    margin: 32px 0;
+}
+
+.progress-content-p6{
+    height: 12px;
+    width: 80%;
+    background-color: #E2C47C;
+    text-align: center;
+    /* line-height: 20px; */
+    color: white;
+    transition: width 0.4s ease-in-out;
+}
+.how-much-time{
+    font-family: "Work Sans";
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 27px;
+    align-self: flex-start;
+    margin: 32px 0;
+}
+
+.p6-choice-box-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.p6-choice-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 517px;
+    height: 81px;
+    background-color: #556579;
+}
+
+.p6-choice-box-content-wrapper{
+    display: flex;
+    flex-direction: row;
+    margin-left: 37px;
+    gap: 20px;
+}
+
+.p6-box-text{
+    font-family: "Work Sans";
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 22px;
+}
+
+
+.p6-radio-input{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+.p6-radio-input + label::before {
+    content: '';
+  display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #556579;
+
+}

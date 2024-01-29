@@ -91,3 +91,36 @@
 #p6-btm-button-container{
     margin: 20px 0 269px 0;
 }
+
+
+
+@media screen and (max-width: 768px) {
+    .p6-wrapper{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 335px;
+        margin: 0 20px;
+        margin-bottom: 376px;
+    }
+    .p6-container{
+        align-self: center;
+        max-width: 335px;
+    }
+
+    .p6-choice-box-container {
+        max-width: 355px;
+    }
+
+    .p6-choice-box{
+        max-width: 355px;
+
+    }
+
+    .p6-choice-box-content-wrapper{
+        gap: 10px;
+    }
+    .logo-container-p6{
+        align-self: center;
+    }
+}

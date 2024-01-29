@@ -1,6 +1,8 @@
 .p7-wrapper {
     display: flex;
     justify-content: center;
+    margin-bottom: 86px;
+
 }
 
 .p7-container {

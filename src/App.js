@@ -8,6 +8,7 @@ import Page5 from './components/quizPages/page5';
 import Page6 from './components/quizPages/page6';
 import Page7 from './components/quizPages/page7';
 
+
 function App() {
   return (
     <Router>
@@ -34,6 +35,9 @@ function App() {
       </Routes>
       <Routes>
         <Route path='/quiz/7' element={<Page7 />} />
+      </Routes>
+      <Routes>
+        <Route path='*' element={<IntroPage />} />
       </Routes>
     </Router>
   );

@@ -17,7 +17,7 @@
     width: 408.62px
 }
 
-.p4-body-content-container{
+.p4-body-content-container {
     display: flex;
     flex-direction: row;
     gap: 43.19px;
@@ -25,48 +25,49 @@
     margin-bottom: 340px;
 }
 
-.p4-r-content-container{
+.p4-r-content-container {
     display: flex;
     flex-direction: column;
 }
 
-.p4-pararaph{
-  font-family: "Work Sans";
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 25px;
-  margin-bottom: 32px;
-  margin-top: 26px;
+.p4-pararaph {
+    font-family: "Work Sans";
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 25px;
+    margin-bottom: 32px;
+    margin-top: 26px;
 }
 
 
 @media screen and (max-width: 768px) {
-.p4-wrapper{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 335px;
-    margin: 0 20px;
-    margin-bottom: 376px;
-}
+    .p4-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 335px;
+        margin: 0 20px;
+        margin-bottom: 376px;
+    }
 
-.p4-container{
-    align-self: center;
-    max-width: 335px;
-}
+    .p4-container {
+        align-self: center;
+        max-width: 335px;
+    }
 
-.p4-body-content-container{
-    max-width: 355px;
-    display: flex;
-    flex-direction: column;
-}
+    .p4-body-content-container {
+        max-width: 355px;
+        display: flex;
+        flex-direction: column;
+    }
 
-.p4-img{
-    width: 355px;
-    height: 301px;
-}
-.p4-body-content-container{
-    margin-top: 28px;
-    gap: 10px;
-}
+    .p4-img {
+        width: 355px;
+        height: 301px;
+    }
+
+    .p4-body-content-container {
+        margin-top: 28px;
+        gap: 10px;
+    }
 }

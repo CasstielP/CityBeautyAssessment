@@ -28,14 +28,14 @@ const Page2 = () => {
     const navigate = useNavigate()
 
     const handleContinue = () => {
-        let isAnyTrue = checkedStates.some(state=> state == true)
+        let isAnyTrue = checkedStates.some(state => state == true)
         if (isAnyTrue || isUnsure) {
             navigate('/quiz/3')
         }
     }
 
     const handleSkip = () => {
-        let isAnyTrue = checkedStates.some(state=> state == true)
+        let isAnyTrue = checkedStates.some(state => state == true)
         if (isAnyTrue) {
             window.alert("Click the 'Continute Button to get to the next page'")
         } else {
@@ -107,34 +107,34 @@ const Page2 = () => {
                     </div>
                     <div className="p1-btm-button-container">
 
-                            <div className="p1-btm-buttons"
-                                id="p1-btm-buttons-continue"
-                                onClick={handleContinue}
-                            >
+                        <div className="p1-btm-buttons"
+                            id="p1-btm-buttons-continue"
+                            onClick={handleContinue}
+                        >
 
-                                <div className="p1-but-text-con"
-                                    id='p1-btm-continue-txt'>
-                                    Continue
-                                </div>
-                                <div className="p1-but-text-con">
-                                    <span class="material-symbols-outlined"
-                                        id='p1BtmArrow'>
-                                        arrow_forward
-                                    </span>
-                                </div>
-
+                            <div className="p1-but-text-con"
+                                id='p1-btm-continue-txt'>
+                                Continue
+                            </div>
+                            <div className="p1-but-text-con">
+                                <span class="material-symbols-outlined"
+                                    id='p1BtmArrow'>
+                                    arrow_forward
+                                </span>
                             </div>
 
+                        </div>
 
 
-                            <div className="p1-btm-buttons"
-                                id='p1ButTextSkip'
-                                onClick={handleSkip}
-                            >
-                                <div id='textSkip'>
-                                    Skip
-                                </div>
+
+                        <div className="p1-btm-buttons"
+                            id='p1ButTextSkip'
+                            onClick={handleSkip}
+                        >
+                            <div id='textSkip'>
+                                Skip
                             </div>
+                        </div>
 
                     </div>
 

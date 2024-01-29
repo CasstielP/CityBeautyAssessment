@@ -18,8 +18,8 @@ const Page6 = () => {
         setSelectOption(event.target.value)
     }
 
-    const getDivStyle  = (optionValue) => {
-        return selectOption === optionValue ? {borderColor: '#E2C47C'} : {}
+    const getDivStyle = (optionValue) => {
+        return selectOption === optionValue ? { borderColor: '#E2C47C' } : {}
     }
 
 
@@ -67,21 +67,21 @@ const Page6 = () => {
 
                     <div className='p6-choice-box-container'>
                         {
-                            boxContent.map((content, index)=>(
-                        <div className='p6-choice-box'
-                            style={getDivStyle(`bodyCareTime${index}`)}>
-                            <div className='p6-choice-box-content-wrapper'>
+                            boxContent.map((content, index) => (
+                                <div className='p6-choice-box'
+                                    style={getDivStyle(`bodyCareTime${index}`)}>
+                                    <div className='p6-choice-box-content-wrapper'>
 
-                                <input type="radio" name="bodyCareTime"
-                                value= {`bodyCareTime${index}`}
-                                className='p6-radio-input'
-                                onChange={handleChange}
-                                checked={selectOption === `bodyCareTime${index}`}
-                                />
-                                <label htmlFor="bodyCareTimeOption" className="p6-radio-label"></label>
-                                <div className='p6-box-text'>{content}</div>
-                            </div>
-                        </div>
+                                        <input type="radio" name="bodyCareTime"
+                                            value={`bodyCareTime${index}`}
+                                            className='p6-radio-input'
+                                            onChange={handleChange}
+                                            checked={selectOption === `bodyCareTime${index}`}
+                                        />
+                                        <label htmlFor="bodyCareTimeOption" className="p6-radio-label"></label>
+                                        <div className='p6-box-text'>{content}</div>
+                                    </div>
+                                </div>
                             ))
                         }
                     </div>
@@ -90,34 +90,34 @@ const Page6 = () => {
                         id='p6-btm-button-container'>
 
 
-                            <div className="p1-btm-buttons"
-                                id="p1-btm-buttons-continue"
-                                onClick={handleContinue}
-                            >
+                        <div className="p1-btm-buttons"
+                            id="p1-btm-buttons-continue"
+                            onClick={handleContinue}
+                        >
 
-                                <div className="p1-but-text-con"
-                                    id='p1-btm-continue-txt'>
-                                    Continue
-                                </div>
-                                <div className="p1-but-text-con">
-                                    <span class="material-symbols-outlined"
-                                        id='p1BtmArrow'>
-                                        arrow_forward
-                                    </span>
-                                </div>
-
+                            <div className="p1-but-text-con"
+                                id='p1-btm-continue-txt'>
+                                Continue
+                            </div>
+                            <div className="p1-but-text-con">
+                                <span class="material-symbols-outlined"
+                                    id='p1BtmArrow'>
+                                    arrow_forward
+                                </span>
                             </div>
 
+                        </div>
 
 
-                            <div className="p1-btm-buttons"
-                                id='p1ButTextSkip'
-                                onClick={handleSkip}
-                            >
-                                <div id='textSkip'>
-                                    Skip
-                                </div>
+
+                        <div className="p1-btm-buttons"
+                            id='p1ButTextSkip'
+                            onClick={handleSkip}
+                        >
+                            <div id='textSkip'>
+                                Skip
                             </div>
+                        </div>
 
                     </div>
                 </div>

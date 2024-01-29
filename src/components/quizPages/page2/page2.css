@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-.p2-container{
+.p2-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,7 +29,7 @@
     transition: width 0.4s ease-in-out;
 }
 
-.p2-what-hydrating-ingre{
+.p2-what-hydrating-ingre {
     height: 59px;
     width: 434px;
     color: #FFFFFF;
@@ -43,7 +43,8 @@
     align-self: flex-start;
 
 }
-.p2-box-text-container{
+
+.p2-box-text-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,7 +53,7 @@
     gap: 10px;
 }
 
-.page2-box-text{
+.page2-box-text {
     height: 38px;
     /* width: 385px; */
     color: #FFFFFF;
@@ -62,7 +63,7 @@
     line-height: 17px;
 }
 
-.p2-box-title{
+.p2-box-title {
     height: 24px;
     /* width: 385px; */
     color: #FFFFFF;
@@ -74,7 +75,7 @@
     margin: 0 0;
 }
 
-.p2-line-break{
+.p2-line-break {
     box-sizing: border-box;
     height: 1px;
     width: 519px;
@@ -96,7 +97,7 @@
 
 }
 
-.unsure-btn-content-container{
+.unsure-btn-content-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -119,11 +120,11 @@
     font-weight: 600;
     letter-spacing: 0;
     line-height: 22px;
-  }
+}
 
 
-  @media screen and (max-width: 768px) {
-    .p2-wrapper{
+@media screen and (max-width: 768px) {
+    .p2-wrapper {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -135,36 +136,38 @@
     .page2-container {
         align-self: center;
         max-width: 335px;
-      }
+    }
 
-.p2-what-hydrating-ingre{
-    max-width: 355px;
+    .p2-what-hydrating-ingre {
+        max-width: 355px;
+    }
+
+
+    .selection-box-page1 {
+        max-width: 355px;
+    }
+
+    .p2-box-text-container {
+        max-width: 355px;
+    }
+
+    .page2-box-text {
+        max-width: 355px;
+    }
+
+    .p2-box-title {
+        max-width: 355px;
+
+    }
+
+    .p2-line-break {
+        max-width: 355px;
+
+    }
+
+    .unsure-btn {
+        max-width: 355px;
+
+    }
+
 }
-
-
-.selection-box-page1{
-    max-width: 355px;
-}
-
-.p2-box-text-container{
-    max-width: 355px;
-}
-.page2-box-text{
-    max-width: 355px;
-}
-
-.p2-box-title{
-    max-width: 355px;
-
-}
-.p2-line-break{
-    max-width: 355px;
-
-}
-
-.unsure-btn {
-    max-width: 355px;
-
-}
-
-  }

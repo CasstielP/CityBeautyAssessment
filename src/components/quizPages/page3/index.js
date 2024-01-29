@@ -27,15 +27,15 @@ const Page3 = () => {
     const [currentImg, setCurrentImg] = useState(normal)
     const sliderRef = useRef(null)
 
-    const mImgArr = [normalM,dryM,microWrinkleM,scalyM,itchyM,crepeyM]
+    const mImgArr = [normalM, dryM, microWrinkleM, scalyM, itchyM, crepeyM]
 
     const p3ContentArray = [
-        {skinTypes: 'Normal Skin',img: normal},
-        {skinTypes: 'Dry Skin',img: dry},
-        {skinTypes: 'Microwrinkles',img: microWrinkle},
-        {skinTypes: 'Scaly, Rough Skin',img: scaly},
-        {skinTypes: 'Itchy, Irritated Skin',img: itchy},
-        {skinTypes: 'Crepey Skin',img: crepey},
+        { skinTypes: 'Normal Skin', img: normal },
+        { skinTypes: 'Dry Skin', img: dry },
+        { skinTypes: 'Microwrinkles', img: microWrinkle },
+        { skinTypes: 'Scaly, Rough Skin', img: scaly },
+        { skinTypes: 'Itchy, Irritated Skin', img: itchy },
+        { skinTypes: 'Crepey Skin', img: crepey },
     ]
 
 
@@ -44,7 +44,7 @@ const Page3 = () => {
 
     const updateImgForScreenWidth = () => {
         const screenWidth = window.innerWidth
-        const newImg = screenWidth < 768? mImgArr[sliderValue] : p3ContentArray[sliderValue].img
+        const newImg = screenWidth < 768 ? mImgArr[sliderValue] : p3ContentArray[sliderValue].img
         setCurrentImg(newImg)
     }
 
@@ -100,54 +100,54 @@ const Page3 = () => {
 
                             <div className="how-would-you-desc">How would you describe your skin?</div>
                             <div className="slider-wrapper">
-                                    <div className="p3-slider-value-text-container" style={{
-                                        position: 'absolute',
-                                        left: `${indicatorLeft}px`,
-                                    }}>
-                                        <div className="p3-slider-value">
+                                <div className="p3-slider-value-text-container" style={{
+                                    position: 'absolute',
+                                    left: `${indicatorLeft}px`,
+                                }}>
+                                    <div className="p3-slider-value">
                                         {p3ContentArray[sliderValue].skinTypes}
-                                        </div>
+                                    </div>
                                 </div>
                                 <div className="slider-container">
                                     <input ref={sliderRef} type="range" min="0" max="5" value={sliderValue}
                                         class="slider" className="p3-slider"
                                         onChange={handleSliderChange} />
                                     <div className="dry-norm-foot-text-container">
-                                        <div className="dry-norm-foot-text-l">Normal <br/>Skin</div>
-                                        <div className="dry-norm-foot-text-r">Crepey <br/>Skin</div>
+                                        <div className="dry-norm-foot-text-l">Normal <br />Skin</div>
+                                        <div className="dry-norm-foot-text-r">Crepey <br />Skin</div>
                                     </div>
                                 </div>
                             </div>
-                    <div className="p1-btm-button-container">
-                        <Link style={{ textDecoration: "none", color: 'none' }} to={'/quiz/4'}>
-                            <div className="p1-btm-buttons"
-                                id="p1-btm-buttons-continue"
-                            >
+                            <div className="p1-btm-button-container">
+                                <Link style={{ textDecoration: "none", color: 'none' }} to={'/quiz/4'}>
+                                    <div className="p1-btm-buttons"
+                                        id="p1-btm-buttons-continue"
+                                    >
 
-                                <div className="p1-but-text-con"
-                                    id='p1-btm-continue-txt'>
-                                    Continue
-                                </div>
-                                <div className="p1-but-text-con">
-                                    <span class="material-symbols-outlined"
-                                        id='p1BtmArrow'>
-                                        arrow_forward
-                                    </span>
-                                </div>
+                                        <div className="p1-but-text-con"
+                                            id='p1-btm-continue-txt'>
+                                            Continue
+                                        </div>
+                                        <div className="p1-but-text-con">
+                                            <span class="material-symbols-outlined"
+                                                id='p1BtmArrow'>
+                                                arrow_forward
+                                            </span>
+                                        </div>
 
+                                    </div>
+                                </Link>
+                                <Link style={{ textDecoration: 'none', color: 'none' }}
+                                    to={'/quiz/4'}>
+                                    <div className="p1-btm-buttons"
+                                        id='p1ButTextSkip'
+                                    >
+                                        <div id='textSkip'>
+                                            Skip
+                                        </div>
+                                    </div>
+                                </Link>
                             </div>
-                        </Link>
-                        <Link style={{ textDecoration: 'none', color: 'none' }}
-                            to={'/quiz/4'}>
-                            <div className="p1-btm-buttons"
-                                id='p1ButTextSkip'
-                            >
-                                <div id='textSkip'>
-                                    Skip
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
                         </div>
                     </div>
 

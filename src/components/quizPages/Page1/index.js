@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './page1.css'
 import cbLogo from './city-beauty-logo.png'
 import leg from './slide4-legs.png'
@@ -30,10 +30,10 @@ function Page1() {
     }
 
 
-    let isAnyTrue = checkedStates.some(state=> state == true)
+    let isAnyTrue = checkedStates.some(state => state == true)
 
     const handleContinue = () => {
-        if(isAnyTrue) {
+        if (isAnyTrue) {
             navigate('/quiz/2')
         }
     }
@@ -76,7 +76,7 @@ function Page1() {
 
                     {checkedStates.map((isChecked, index) => (
                         <div key={index} className="selection-box-page1"
-                        style={{borderColor: isChecked ? '#E2C47C' : 'initial'}}>
+                            style={{ borderColor: isChecked ? '#E2C47C' : 'initial' }}>
                             <div className="p1-text-container">
                                 <div className="check-box" onClick={() => handleCheckBox(index)}
 
@@ -95,17 +95,17 @@ function Page1() {
 
                         <div className="p1-btm-buttons"
                             id="p1-btm-buttons-continue"
-                        onClick={handleContinue}>
+                            onClick={handleContinue}>
 
                             <div className="p1-but-text-con"
                                 id='p1-btm-continue-txt'
 
-                                >
+                            >
                                 Continue
                             </div>
                             <div className="p1-but-text-con">
                                 <span class="material-symbols-outlined"
-                                      id='p1BtmArrow'>
+                                    id='p1BtmArrow'>
                                     arrow_forward
                                 </span>
                             </div>
@@ -115,12 +115,12 @@ function Page1() {
 
 
                         <div className="p1-btm-buttons"
-                             id='p1ButTextSkip'
-                             onClick={handleSkip}
+                            id='p1ButTextSkip'
+                            onClick={handleSkip}
                         >
-                                <div id='textSkip'>
+                            <div id='textSkip'>
                                 Skip
-                                </div>
+                            </div>
                         </div>
 
                     </div>

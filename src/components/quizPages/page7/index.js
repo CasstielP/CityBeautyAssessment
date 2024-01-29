@@ -27,7 +27,7 @@ const Page7 = () => {
         setCheckedStates(updatedCheckedStates)
     }
 
-    let isAnyTrue = checkedStates.some(state=> state==true)
+    let isAnyTrue = checkedStates.some(state => state == true)
 
     const handleContinue = () => {
         if (isAnyTrue || isNoneAbove) {
@@ -85,7 +85,7 @@ const Page7 = () => {
                     </div>
 
                     <div className='have-you-exp'>
-                        Have you experienced any of these issues <br/>in your previous skincare attempts?
+                        Have you experienced any of these issues <br />in your previous skincare attempts?
                     </div>
 
 
@@ -122,45 +122,45 @@ const Page7 = () => {
 
                     <div className="p1-btm-button-container"
                     >
-                            <div className="p1-btm-buttons"
-                                id="p1-btm-buttons-continue"
-                                onClick={handleContinue}
-                            >
+                        <div className="p1-btm-buttons"
+                            id="p1-btm-buttons-continue"
+                            onClick={handleContinue}
+                        >
 
-                                <div className="p1-but-text-con"
-                                    id='p1-btm-continue-txt'>
-                                    Continue
-                                </div>
-                                <div className="p1-but-text-con">
-                                    <span class="material-symbols-outlined"
-                                        id='p1BtmArrow'>
-                                        arrow_forward
-                                    </span>
-                                </div>
-
+                            <div className="p1-but-text-con"
+                                id='p1-btm-continue-txt'>
+                                Continue
                             </div>
-                            <div className="p1-btm-buttons"
-                                id='p1ButTextSkip'
-                                onClick={handleSkip}
-                            >
-                                <div id='textSkip'>
-                                    Skip
-                                </div>
+                            <div className="p1-but-text-con">
+                                <span class="material-symbols-outlined"
+                                    id='p1BtmArrow'>
+                                    arrow_forward
+                                </span>
                             </div>
-                    </div>
 
-                    {isDone &&
-                    <div ref={divRef} className='p7-thank-you'>
-                        <div className='p7-thankyou-content-container'>
-                            <div className='thankyou-title'>Thanks for sharing!</div>
-                            <div className='thankyou-text'>We've discovered that a lot of people have faced the
-                                <br/>same setbacks. City Beauty has a clear one-step
-                                <br/>treatment that is easy to follow with long-term
-                                <br/>results. In less than two minutes, you will feel better
-                                <br/>than ever.
+                        </div>
+                        <div className="p1-btm-buttons"
+                            id='p1ButTextSkip'
+                            onClick={handleSkip}
+                        >
+                            <div id='textSkip'>
+                                Skip
                             </div>
                         </div>
                     </div>
+
+                    {isDone &&
+                        <div ref={divRef} className='p7-thank-you'>
+                            <div className='p7-thankyou-content-container'>
+                                <div className='thankyou-title'>Thanks for sharing!</div>
+                                <div className='thankyou-text'>We've discovered that a lot of people have faced the
+                                    <br />same setbacks. City Beauty has a clear one-step
+                                    <br />treatment that is easy to follow with long-term
+                                    <br />results. In less than two minutes, you will feel better
+                                    <br />than ever.
+                                </div>
+                            </div>
+                        </div>
                     }
 
                 </div>

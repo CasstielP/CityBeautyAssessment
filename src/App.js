@@ -15,25 +15,25 @@ function App() {
         <Route path='/' element={<IntroPage />} />
       </Routes>
       <Routes>
-        <Route path='/quiz/1' element={<Page1/>} />
+        <Route path='/quiz/1' element={<Page1 />} />
       </Routes>
       <Routes>
-        <Route path='/quiz/2' element={<Page2/>} />
+        <Route path='/quiz/2' element={<Page2 />} />
       </Routes>
       <Routes>
-        <Route path='/quiz/3' element={<Page3/>} />
+        <Route path='/quiz/3' element={<Page3 />} />
       </Routes>
       <Routes>
-        <Route path='/quiz/4' element={<Page4/>} />
+        <Route path='/quiz/4' element={<Page4 />} />
       </Routes>
       <Routes>
-        <Route path='/quiz/5' element={<Page5/>} />
+        <Route path='/quiz/5' element={<Page5 />} />
       </Routes>
       <Routes>
-        <Route path='/quiz/6' element={<Page6/>} />
+        <Route path='/quiz/6' element={<Page6 />} />
       </Routes>
       <Routes>
-        <Route path='/quiz/7' element={<Page7/>} />
+        <Route path='/quiz/7' element={<Page7 />} />
       </Routes>
     </Router>
   );

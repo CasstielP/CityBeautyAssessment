@@ -54,7 +54,7 @@ const Page5 = () => {
             const slider = sliderRef.current;
             // const max = types.length - 1;
             const max = 10;
-            const newPos = (sliderValue / max) * (slider.offsetWidth) -40
+            const newPos = (sliderValue / max) * (slider.offsetWidth) - 40
             setIndicatorLeft(newPos)
         }
     }, [sliderValue]);

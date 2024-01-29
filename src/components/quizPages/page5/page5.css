@@ -12,9 +12,14 @@
     margin: 32px 0;
 }
 
-.p5-slider {
+.p5-slider[type='range'] {
     width: 519px;
     max-height: 30px;
+    background: transparent;
+
+}
+input[type='range'] {
+    background: transparent;
 
 }
 
@@ -52,6 +57,10 @@
             rgba(255, 255, 255, 0.9) 80.4%, rgba(255, 255, 255, 0.9) 89.95%,
             transparent 89.95%, transparent 90.45%,
             rgba(255, 255, 255, 1.0) 90.45%, rgba(255, 255, 255, 1.0) 100%);
+}
+
+.p5-slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
 }
 
 .p5-slider::-webkit-slider-runnable-track:focus{
@@ -117,7 +126,7 @@
     content: attr(data-value);
     position: absolute;
     left: var(--position);
-    bottom: 30px; /* Adjust this value to position the box above the slider */
+    bottom: 30px;
     transform: translateX(-50%);
     top: -35px;
 }

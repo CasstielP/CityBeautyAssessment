@@ -163,3 +163,39 @@
     letter-spacing: 0;
     line-height: 17px
 }
+
+
+@media screen and (max-width: 768px) {
+.p5-wrapper{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 335px;
+    margin: 0 20px;
+    margin-bottom: 376px;
+}
+.p5-container{
+    align-self: center;
+    max-width: 335px;
+}
+
+.p5-slider-wrapper{
+    max-width: 355px;
+}
+.p5-1-10{
+    max-width: 355px;
+
+}
+.p5-slider{
+    max-width: 355px;
+
+}
+.p5-info-box{
+    max-width: 355px;
+
+}
+.new-pro-container{
+    max-width: 355px;
+
+}
+}

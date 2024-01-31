@@ -31,19 +31,6 @@ const Page5 = () => {
         { title: 'Pro', text: 'I\'m on fire. Deeply hydrating my skin every day is a must to stimulate collagen/elastin' },
     ]
 
-    const p5ContentArray = [
-        { skinTypes: 'Normal Skin', img: normal },
-        { skinTypes: 'Dry Skin', img: dry },
-        { skinTypes: 'Microwrinkles', img: microWrinkle },
-        { skinTypes: 'Scaly, Rough Skin', img: scaly },
-        { skinTypes: 'Itchy, Irritated Skin', img: itchy },
-        { skinTypes: 'Crepey Skin', img: crepey },
-    ]
-
-
-    const types = ['Normal Skin', 'Dry Skin', 'Microwrinkles',
-        'Scaly, Rough Skin', 'Itchy, Irritated Skin', 'Crepey Skin']
-
     const handleSliderChange = (event) => {
         setSliderValue(event.target.value)
     }

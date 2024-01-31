@@ -27,7 +27,7 @@ const Page7 = () => {
         setCheckedStates(updatedCheckedStates)
     }
 
-    let isAnyTrue = checkedStates.some(state => state == true)
+    let isAnyTrue = checkedStates.some(state => state == true) || isNoneAbove
 
     const handleContinue = () => {
         if (isAnyTrue || isNoneAbove) {

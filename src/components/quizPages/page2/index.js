@@ -35,7 +35,7 @@ const Page2 = () => {
     }
 
     const handleSkip = () => {
-        let isAnyTrue = checkedStates.some(state => state == true)
+        let isAnyTrue = checkedStates.some(state => state == true) || isUnsure
         if (isAnyTrue) {
             window.alert("Click the 'Continute Button to get to the next page'")
         } else {
@@ -47,6 +47,7 @@ const Page2 = () => {
     const handleUnsure = () => {
         setIsUnsure(prevState => !prevState)
     }
+
     useEffect(() => {
 
     }, [isUnsure])
